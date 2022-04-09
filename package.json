@@ -1,0 +1,27 @@
+{
+  "name": "dio-bootcamp-carrefour-web-developer-",
+  "version": "1.0.0",
+  "description": "DIO - Projeto BootCamp Carrefour",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleitonCorrea/dio-bootcamp-carrefour-web-developer-.git"
+  },
+  "keywords": [
+    "dio",
+    "Bootcamp",
+    "carrefour",
+    "digital",
+    "inovation",
+    "one"
+  ],
+  "author": "Cleiton Rodrigo Corrêa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CleitonCorrea/dio-bootcamp-carrefour-web-developer-/issues"
+  },
+  "homepage": "https://github.com/CleitonCorrea/dio-bootcamp-carrefour-web-developer-#readme"
+}
