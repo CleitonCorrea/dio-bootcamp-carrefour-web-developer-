@@ -1,0 +1,39 @@
+# Configurando uma pipeline para gerenciar o repositório
+name: dio-bootcamp-carrefour
+
+# Método on é o responsável por disparar nossa pipeline
+on:
+
+  # Aciona o fluxo de trabalho em eventos de solicitação push ou pull e commits na branch develop
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  commit_comment:
+    branches: [ develop ]
+
+  # Execução manual do fluxo de trabalho
+  workflow_dispatch:
+
+# A execucao do fluxo de trabalho pode ser executada sequencial ou paralelamente
+jobs:
+
+  # Este fluxo de trabalho contém um único trabalho chamado "build"
+  build:
+    # Executor responsável por executar nossa pipeline
+    runs-on: ubuntu-latest
+
+    # Steps A sequencia de tarefas que serão executadas pela pipeline
+    steps:
+      # Faz o check-out do seu repositório em $GITHUB_WORKSPACE, para que seu trabalho possa acessá-lo
+      - uses: actions/checkout@v3
+
+      # Executa um único comando usando o shell runners
+      - name: Run a one-line script
+        run: echo Deploy aprovado!
+
+      # Executando Shell Runners (execução de multiplos scripts)
+      - name: Run a multi-line script
+        run: |
+          echo Esta ação esta sendo verificada!,
+          echo Os testes estão sendo executado. Caso esteja tudo ok o deploy será feito para o servidor
