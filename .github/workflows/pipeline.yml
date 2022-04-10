@@ -4,11 +4,11 @@ name: dio-bootcamp-carrefour
 # Método on é o responsável por disparar nossa pipeline
 on:
 
-  # Aciona o fluxo de trabalho em eventos de solicitação push ou pull e commits na branch develop
+  # Aciona o fluxo de trabalho em eventos de solicitação push ou pull nas branchs main | develop
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
   # Execução manual do fluxo de trabalho
   workflow_dispatch:
